@@ -5,7 +5,8 @@ class NotesController < ApplicationController
     end
 
     def create
-        note = Note.create(note_params)
+        note = Note.create({title: params["title"], content: params["content"], user_id: params["user_id"]})
+        NoteTag.create({note: note, tag: Tag.find_or_create_by(name: params["note_tag"])})
         render json: note
     end
 

@@ -42,3 +42,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Pry
 gem 'pry'
+
+# Serializer
+gem 'active_model_serializers'
